@@ -1,24 +1,39 @@
-# ctgu_admin
+```
+ctgu_admin
+├─ .eslintignore
+├─ .eslintrc.js
+├─ .gitignore
+├─ .prettierrc.js
+├─ index.html
+├─ mock
+├─ package-lock.json
+├─ package.json
+├─ public
+│  └─ favicon.ico
+├─ README.md
+├─ src
+│  ├─ api
+│  ├─ App.vue
+│  ├─ assets
+│  │  ├─ logo.png
+│  │  ├─ style
+│  │  └─ svg
+│  ├─ components
+│  ├─ layout
+│  ├─ main.js
+│  ├─ permission.js
+│  ├─ router
+│  │  ├─ index.js
+│  │  └─ modules
+│  ├─ store
+│  │  ├─ index.js
+│  │  └─ modules
+│  ├─ utils
+│  │  ├─ index.js
+│  │  ├─ request.js
+│  │  └─ storage.js
+│  └─ views
+├─ vite.config.js
+└─ yarn.lock
 
-## Project setup
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
