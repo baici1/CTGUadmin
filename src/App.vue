@@ -25,14 +25,15 @@
  * 
  * @Date: 2021-07-28 16:13:41
  * @LastEditors: baici
- * @LastEditTime: 2021-07-28 23:39:58
+ * @LastEditTime: 2021-07-30 01:15:18
  * @FilePath: \src\App.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
 
 <template>
-  <router-view />
-  111
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">

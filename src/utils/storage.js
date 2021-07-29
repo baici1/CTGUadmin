@@ -15,7 +15,28 @@
  *
  * @Date: 2021-07-28 20:29:42
  * @LastEditors: baici
- * @LastEditTime: 2021-07-28 20:29:45
+ * @LastEditTime: 2021-07-29 22:08:17
  * @FilePath: \src\utils\storage.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
+//封装localstorage操作
+export const getItem = (name) => {
+  const data = window.localStorage.getItem(name);
+  try {
+    return JSON.parse(data);
+  } catch (err) {
+    return data;
+  }
+};
+
+export const setItem = (name, value) => {
+  if (typeof value === "object") {
+    value = JSON.stringify(value);
+  }
+
+  window.localStorage.setItem(name, value);
+};
+
+export const removeItem = (name) => {
+  window.localStorage.removeItem(name);
+};
