@@ -24,7 +24,7 @@
  *
  * @Date: 2021-07-29 21:27:43
  * @LastEditors: baici
- * @LastEditTime: 2021-07-30 00:01:40
+ * @LastEditTime: 2021-07-30 01:18:52
  * @FilePath: \mock\login.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -47,7 +47,7 @@ export default [
       } else {
         return {
           code: 400,
-          message: "密码错误，请输入123456",
+          message: "请输入123456",
         };
       }
     },
