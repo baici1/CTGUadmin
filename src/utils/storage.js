@@ -15,11 +15,12 @@
  *
  * @Date: 2021-07-28 20:29:42
  * @LastEditors: baici
- * @LastEditTime: 2021-07-29 22:08:17
+ * @LastEditTime: 2021-07-30 13:42:53
  * @FilePath: \src\utils\storage.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
 //封装localstorage操作
+//获取localstorage
 export const getItem = (name) => {
   const data = window.localStorage.getItem(name);
   try {
@@ -28,7 +29,7 @@ export const getItem = (name) => {
     return data;
   }
 };
-
+//设置localstorage
 export const setItem = (name, value) => {
   if (typeof value === "object") {
     value = JSON.stringify(value);
@@ -36,7 +37,7 @@ export const setItem = (name, value) => {
 
   window.localStorage.setItem(name, value);
 };
-
+//清除localstorage
 export const removeItem = (name) => {
   window.localStorage.removeItem(name);
 };

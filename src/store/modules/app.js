@@ -11,12 +11,12 @@
  *
  * @Date: 2021-07-29 22:07:05
  * @LastEditors: baici
- * @LastEditTime: 2021-07-30 00:32:33
+ * @LastEditTime: 2021-07-30 14:05:52
  * @FilePath: \src\store\modules\app.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
 import { getItem, setItem, removeItem } from "@/utils/storage"; //getItem和setItem是封装的操作localStorage的方法
-import { toRaw } from "vue";
+// import { toRaw } from "vue";
 export const TOKEN = "TOKEN";
 const COLLAPSE = "COLLAPSE";
 export default {
@@ -67,27 +67,27 @@ export default {
       // 清除用户信息
       commit("account/clearUserinfo", "", { root: true });
     },
-    setScreenCode({ commit, state }, password) {
-      const authorization = toRaw(state.authorization);
+    // setScreenCode({ commit, state }, password) {
+    //   const authorization = toRaw(state.authorization);
 
-      if (!password) {
-        try {
-          delete authorization.screenCode;
-        } catch (err) {
-          console.log(err);
-        }
-        commit("setToken", authorization);
+    //   if (!password) {
+    //     try {
+    //       delete authorization.screenCode;
+    //     } catch (err) {
+    //       console.log(err);
+    //     }
+    //     commit("setToken", authorization);
 
-        return;
-      }
+    //     return;
+    //   }
 
-      // 对密码加密
-      //  const screenCode = new AesEncryption().encryptByAES(password);
+    //   // 对密码加密
+    //   //  const screenCode = new AesEncryption().encryptByAES(password);
 
-      commit("setToken", {
-        ...authorization,
-        password,
-      });
-    },
+    //   commit("setToken", {
+    //     ...authorization,
+    //     password,
+    //   });
+    // },
   },
 };

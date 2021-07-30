@@ -12,32 +12,32 @@
  *
  * @Date: 2021-07-28 20:13:10
  * @LastEditors: baici
- * @LastEditTime: 2021-07-29 21:13:31
+ * @LastEditTime: 2021-07-30 13:43:05
  * @FilePath: \src\router\index.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
-import { createRouter, createWebHashHistory } from 'vue-router'
-import login from './modules/login'
+import { createRouter, createWebHashHistory } from "vue-router";
+import login from "./modules/login";
 
 /* 菜单栏的路由 */
 // 固定菜单
-export const fixedRoutes = []
+export const fixedRoutes = [];
 // 动态菜单
-export const asyncRoutes = []
+export const asyncRoutes = [];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: [{ path: '/', redirect: '/login' }, ...login],
+  routes: [{ path: "/", redirect: "/login" }, ...login],
   scrollBehavior(to, from, savedPosition) {
     // savedPosition 会在你使用浏览器前进或后退按钮时候生效
     // 这个跟你使用 router.go() 或 router.back() 效果一致
     //这里主要处理当你的home滚动再底部，跳转页面也是底部的bug情况
     //主要是让页面回到顶部
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { x: 0, y: 0 }
+      return { x: 0, y: 0 };
     }
   },
-})
-export default router
+});
+export default router;
