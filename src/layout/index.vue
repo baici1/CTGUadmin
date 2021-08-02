@@ -15,21 +15,27 @@
  * 
  * @Date: 2021-07-30 14:27:10
  * @LastEditors: baici
- * @LastEditTime: 2021-07-31 23:15:10
+ * @LastEditTime: 2021-08-02 14:27:59
  * @FilePath: \src\layout\index.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
 <template>
   <div class="wrapper">
     <Sidebar></Sidebar>
+    <div class="right">
+      <div class="top"><topbar></topbar></div>
+      <div class="main">main</div>
+    </div>
   </div>
 </template>
 
 <script>
 import Sidebar from "./components/Sidebar/index.vue";
+import Topbar from "./components/Topbar/index.vue";
 export default {
   components: {
     Sidebar,
+    Topbar,
   },
   setup() {},
 };
@@ -41,5 +47,20 @@ export default {
   margin: 0 auto;
   width: 100%;
   height: 100%;
+  .right {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .top {
+      background: #fff;
+    }
+    .main {
+      flex: 1;
+      background: #f5f5f5;
+      padding: 16px;
+      overflow: auto;
+    }
+  }
 }
 </style>

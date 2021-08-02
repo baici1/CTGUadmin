@@ -35,7 +35,7 @@
  *
  * @Date: 2021-08-01 21:48:56
  * @LastEditors: baici
- * @LastEditTime: 2021-08-01 21:58:22
+ * @LastEditTime: 2021-08-02 19:51:44
  * @FilePath: \src\router\modules\test.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -47,27 +47,27 @@ export default [
     name: "测试",
     component: Layout,
     meta: {
-      title: "工作台",
+      title: "测试1",
     },
     icon: "el-icon-s-home",
     children: [
       {
-        path: "",
-        name: "test",
+        path: "/test2",
+        name: "test2",
         component: Test,
         icon: "el-icon-s-home",
         meta: {
-          title: "首页",
+          title: "测试2",
           roles: ["visitor"],
         },
       },
       {
-        path: "/test2",
-        name: "test",
+        path: "/test3",
+        name: "test3",
         component: Test,
         icon: "el-icon-s-home",
         meta: {
-          title: "首页-测试",
+          title: "测试3",
           roles: ["visitor"],
         },
       },

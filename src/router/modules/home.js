@@ -35,7 +35,7 @@
  *
  * @Date: 2021-07-30 14:24:31
  * @LastEditors: baici
- * @LastEditTime: 2021-08-01 21:50:38
+ * @LastEditTime: 2021-08-02 20:07:59
  * @FilePath: \src\router\modules\home.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -63,7 +63,7 @@ export default [
       },
       {
         path: "/test",
-        name: "home",
+        name: "home1",
         component: Home,
         meta: {
           title: "测试",

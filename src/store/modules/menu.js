@@ -24,18 +24,13 @@
  *
  * @Date: 2021-07-31 15:29:16
  * @LastEditors: baici
- * @LastEditTime: 2021-08-01 22:37:13
+ * @LastEditTime: 2021-08-02 19:50:54
  * @FilePath: \src\store\modules\menu.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
 import { asyncRoutes } from "@/router";
 //判断路由的权限是否此时用户身份
 const hasPermission = (role, route) => {
-  console.log(
-    "%c 🍅 role: ",
-    "font-size:20px;background-color: #F5CE50;color:#fff;",
-    role
-  );
   //判断meta是否存在
   //判断是否有roles
   //判断role是否存在roles
@@ -84,11 +79,6 @@ const getFilterMenus = (arr, role, parentPath = "") => {
 const handleMenus = (menus) => {
   for (let i = 0; i < menus.length; i++) {
     if (menus[i].children.length == 0) {
-      console.log(
-        "%c 🍋 menus[i]: ",
-        "font-size:20px;background-color: #93C0A4;color:#fff;",
-        menus[i]
-      );
       menus.splice(i, 1);
     }
   }
