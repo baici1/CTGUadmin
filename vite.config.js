@@ -22,28 +22,37 @@
  *
  * @Date: 2021-07-28 16:13:41
  * @LastEditors: baici
- * @LastEditTime: 2021-07-28 23:57:20
+ * @LastEditTime: 2021-07-31 16:04:03
  * @FilePath: \vite.config.js
  */
 
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import path from 'path'
-import { viteMockServe } from 'vite-plugin-mock'
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
+import path from "path";
+//处理mock数据
+import { viteMockServe } from "vite-plugin-mock";
+//处理icon
+import viteSvgIcons from "vite-plugin-svg-icons";
 // https://vitejs.dev/config/
-export default env => {
+export default (env) => {
   console.log(
-    '%c 🍕 env: ',
-    'font-size:20px;background-color: #F5CE50;color:#fff;',
+    "%c 🍕 env: ",
+    "font-size:20px;background-color: #F5CE50;color:#fff;",
     env
-  )
+  );
   return defineConfig({
     plugins: [
       vue(),
       viteMockServe({
         // default
-        mockPath: 'mock',
-        localEnabled: env.command === 'serve',
+        mockPath: "mock",
+        localEnabled: env.command === "serve",
+      }),
+      viteSvgIcons({
+        // 指定需要缓存的图标文件夹
+        iconDirs: [path.resolve(__dirname, "src/assets/svg")],
+        // 指定symbolId格式
+        symbolId: "icon-[dir]-[name]",
       }),
     ],
     css: {
@@ -57,7 +66,7 @@ export default env => {
     resolve: {
       //设置@的代表的位置
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        "@": path.resolve(__dirname, "src"),
       },
     },
     //解决跨域
@@ -71,5 +80,5 @@ export default env => {
     //   },
     // },
     esbuild: false,
-  })
-}
+  });
+};

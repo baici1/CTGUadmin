@@ -12,22 +12,23 @@
  *
  * @Date: 2021-07-28 20:13:10
  * @LastEditors: baici
- * @LastEditTime: 2021-07-30 13:43:05
+ * @LastEditTime: 2021-08-01 21:51:52
  * @FilePath: \src\router\index.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
 import { createRouter, createWebHashHistory } from "vue-router";
 import login from "./modules/login";
-
+import home from "./modules/home";
+import test from "./modules/test";
 /* 菜单栏的路由 */
 // 固定菜单
 export const fixedRoutes = [];
 // 动态菜单
-export const asyncRoutes = [];
+export const asyncRoutes = [...home, ...test];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: [{ path: "/", redirect: "/login" }, ...login],
+  routes: [{ path: "/", redirect: "/home" }, ...login, ...asyncRoutes],
   scrollBehavior(to, from, savedPosition) {
     // savedPosition 会在你使用浏览器前进或后退按钮时候生效
     // 这个跟你使用 router.go() 或 router.back() 效果一致
