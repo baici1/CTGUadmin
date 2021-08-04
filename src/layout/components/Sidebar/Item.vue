@@ -20,7 +20,7 @@
  * 
  * @Date: 2021-07-30 16:26:25
  * @LastEditors: baici
- * @LastEditTime: 2021-07-31 23:57:11
+ * @LastEditTime: 2021-08-03 15:06:11
  * @FilePath: \src\layout\components\Sidebar\Item.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
@@ -47,7 +47,7 @@ export default {
   setup({ icon }) {
     //判断是否是element-plus的图标
     const isElementIcon = computed(() => icon && icon.startsWith("el-icon"));
-    return { isElementIcon, Icon: computed(() => icon || "home") };
+    return { isElementIcon, Icon: computed(() => icon || "") };
   },
 };
 </script>

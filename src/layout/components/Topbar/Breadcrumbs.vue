@@ -23,7 +23,7 @@
  * 
  * @Date: 2021-08-02 16:19:13
  * @LastEditors: baici
- * @LastEditTime: 2021-08-02 20:48:34
+ * @LastEditTime: 2021-08-02 23:55:11
  * @FilePath: \src\layout\components\Topbar\Breadcrumbs.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
@@ -47,6 +47,11 @@ export default {
   setup(props, { emit }) {
     const router = useRouter();
     const route = router.currentRoute; //获取当前路由
+    console.log(
+      "%c 🥫 route: ",
+      "font-size:20px;background-color: #EA7E5C;color:#fff;",
+      route
+    );
     const breadcrumbs = ref([]);
     const getBreadcrumbs = (route) => {
       const home = [{ path: "/", meta: { title: "首页" } }];

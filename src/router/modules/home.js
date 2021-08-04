@@ -35,7 +35,7 @@
  *
  * @Date: 2021-07-30 14:24:31
  * @LastEditors: baici
- * @LastEditTime: 2021-08-02 20:07:59
+ * @LastEditTime: 2021-08-04 23:39:09
  * @FilePath: \src\router\modules\home.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -59,15 +59,7 @@ export default [
         meta: {
           title: "首页",
           roles: ["visitor", "admin"],
-        },
-      },
-      {
-        path: "/test",
-        name: "home1",
-        component: Home,
-        meta: {
-          title: "测试",
-          roles: ["visitor"],
+          affix: true,
         },
       },
     ],

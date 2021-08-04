@@ -15,7 +15,7 @@
  * 
  * @Date: 2021-07-30 14:27:10
  * @LastEditors: baici
- * @LastEditTime: 2021-08-02 14:27:59
+ * @LastEditTime: 2021-08-04 23:38:35
  * @FilePath: \src\layout\index.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
@@ -23,8 +23,13 @@
   <div class="wrapper">
     <Sidebar></Sidebar>
     <div class="right">
-      <div class="top"><topbar></topbar></div>
-      <div class="main">main</div>
+      <div class="top">
+        <topbar></topbar>
+        <tagsbar></tagsbar>
+      </div>
+      <div class="main">
+        <Content></Content>
+      </div>
     </div>
   </div>
 </template>
@@ -32,10 +37,15 @@
 <script>
 import Sidebar from "./components/Sidebar/index.vue";
 import Topbar from "./components/Topbar/index.vue";
+import Tagsbar from "./components/Tagsbar/index.vue";
+import Content from "./components/Content/index.vue";
 export default {
+  name: "layout",
   components: {
     Sidebar,
     Topbar,
+    Tagsbar,
+    Content,
   },
   setup() {},
 };
