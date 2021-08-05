@@ -1,12 +1,17 @@
+<!--
+ * @Date: 2021-08-02 14:01:22
+ * @LastEditors: baici
+ * @LastEditTime: 2021-08-05 01:07:47
+ * @FilePath: \src\layout\components\Topbar\index.vue
+ * @Github: https://github.com/baici1/CTGUadmin
+-->
 <template>
   <div class="header">
     <div class="navigation">
       <!-- 用于mobile显示 -->
       <logo v-if="isShowLogo"></logo>
       <hamburger></hamburger>
-      <breadcrumbs
-        @on-breadcrumbs-change="handleBreadcrumbsChange"
-      ></breadcrumbs>
+      <breadcrumbs></breadcrumbs>
     </div>
     <div class="action">
       <Userinfo></Userinfo>

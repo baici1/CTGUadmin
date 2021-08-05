@@ -25,7 +25,7 @@
  *
  * @Date: 2021-07-28 20:36:28
  * @LastEditors: baici
- * @LastEditTime: 2021-08-01 00:31:27
+ * @LastEditTime: 2021-08-05 01:19:09
  * @FilePath: \src\permission.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -42,10 +42,20 @@ const getPageTitle = (title) => {
   }
   return appTitle;
 };
+// 白名单，里面是路由对象的name
+const WhiteList = ["login"];
 router.beforeEach(async (to) => {
   document.title = getPageTitle(!!to.meta && to.meta.title);
+  if (WhiteList.includes(to.name)) {
+    return true;
+  }
   //判断是否由token
   if (!window.localStorage[TOKEN]) {
+    console.log(
+      "%c 🥒 window.localStorage[TOKEN]: ",
+      "font-size:20px;background-color: #ED9EC7;color:#fff;",
+      window.localStorage[TOKEN]
+    );
     //没有就直接返回到登录页
     return {
       name: "login",
@@ -73,6 +83,11 @@ router.beforeEach(async (to) => {
           "%c 🍐 userinfo: ",
           "font-size:20px;background-color: #F5CE50;color:#fff;",
           userinfo
+        );
+        console.log(
+          "%c 🍣 to.fullPath: ",
+          "font-size:20px;background-color: #FFDD4D;color:#fff;",
+          to.fullPath
         );
         await store.dispatch("menu/generateMenus", userinfo.role);
 

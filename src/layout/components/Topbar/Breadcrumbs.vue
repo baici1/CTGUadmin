@@ -23,7 +23,7 @@
  * 
  * @Date: 2021-08-02 16:19:13
  * @LastEditors: baici
- * @LastEditTime: 2021-08-02 23:55:11
+ * @LastEditTime: 2021-08-05 01:07:57
  * @FilePath: \src\layout\components\Topbar\Breadcrumbs.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
@@ -79,7 +79,7 @@ export default {
       (newRoute) => {
         breadcrumbs.value = getBreadcrumbs(route.value);
         ///触发当前实例上的事件
-        emit("on-breadcrumbs-change", breadcrumbs.value.length > 1);
+        // emit("on-breadcrumbs-change", breadcrumbs.value.length > 1);
       },
       {
         immediate: true, //第一次就会执行回调

@@ -42,7 +42,7 @@
  * 
  * @Date: 2021-08-04 23:01:07
  * @LastEditors: baici
- * @LastEditTime: 2021-08-04 23:37:44
+ * @LastEditTime: 2021-08-05 00:56:45
  * @FilePath: \src\layout\components\Content\index.vue
  * @Github: https://github.com/baici1/CTGUadmin
  -->
@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import { computed } from "@vue/runtime-core";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { useStore } from "vuex";
 export default {

@@ -22,7 +22,7 @@
  *
  * @Date: 2021-07-28 16:13:41
  * @LastEditors: baici
- * @LastEditTime: 2021-07-31 16:04:03
+ * @LastEditTime: 2021-08-04 23:54:51
  * @FilePath: \vite.config.js
  */
 
@@ -68,6 +68,10 @@ export default (env) => {
       alias: {
         "@": path.resolve(__dirname, "src"),
       },
+    },
+    server: {
+      open: true,
+      port: 8080,
     },
     //解决跨域
     // server: {

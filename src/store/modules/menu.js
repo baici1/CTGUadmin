@@ -24,7 +24,7 @@
  *
  * @Date: 2021-07-31 15:29:16
  * @LastEditors: baici
- * @LastEditTime: 2021-08-02 19:50:54
+ * @LastEditTime: 2021-08-05 16:40:41
  * @FilePath: \src\store\modules\menu.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -77,7 +77,7 @@ const getFilterMenus = (arr, role, parentPath = "") => {
 };
 //处理当此时一个菜单项全是一个身份时候，此时不应该产生
 const handleMenus = (menus) => {
-  for (let i = 0; i < menus.length; i++) {
+  for (let i = 1; i < menus.length; i++) {
     if (menus[i].children.length == 0) {
       menus.splice(i, 1);
     }

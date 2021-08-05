@@ -24,7 +24,7 @@
  *
  * @Date: 2021-07-28 20:28:45
  * @LastEditors: baici
- * @LastEditTime: 2021-07-30 14:18:37
+ * @LastEditTime: 2021-08-05 00:43:09
  * @FilePath: \src\utils\request.js
  * @Github: https://github.com/baici1/CTGUadmin
  */

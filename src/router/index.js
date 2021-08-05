@@ -12,7 +12,7 @@
  *
  * @Date: 2021-07-28 20:13:10
  * @LastEditors: baici
- * @LastEditTime: 2021-08-04 16:32:41
+ * @LastEditTime: 2021-08-05 01:18:01
  * @FilePath: \src\router\index.js
  * @Github: https://github.com/baici1/CTGUadmin
  */
@@ -32,7 +32,7 @@ const router = createRouter({
   routes: [
     { path: "/", redirect: "/home" },
     ...login,
-    ...redirect, // 统一的重定向配置
+    //...redirect, // 统一的重定向配置
     ...asyncRoutes,
   ],
   scrollBehavior(to, from, savedPosition) {
